@@ -119,6 +119,60 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &147207947 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1720570442499770108, guid: f5c97668d6946ec4da83843aae9c22c4, type: 3}
+  m_PrefabInstance: {fileID: 1990939572463175858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &196224436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 196224438}
+  - component: {fileID: 196224437}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &196224437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196224436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b6fe9e88b2364a4bab011e7fd4f12a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  Roads:
+  - {fileID: 863989489}
+  - {fileID: 147207947}
+  playerPrefab: {fileID: 337908201}
+  roadPartDistance: 3
+--- !u!4 &196224438
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196224436}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &337908199 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d4494ba1a3386cf4ea088fa2f3f7bf97, type: 3}
@@ -327,6 +381,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &863989489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6830283986226088664, guid: cae68bdf912f77945b3449ee66460973, type: 3}
+  m_PrefabInstance: {fileID: 6888431376439543348}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2093961549
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,7 +553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4494ba1a3386cf4ea088fa2f3f7bf97, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.1465
+      value: -5.686
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4494ba1a3386cf4ea088fa2f3f7bf97, type: 3}
       propertyPath: m_LocalRotation.w
@@ -571,7 +630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 497892165467204670, guid: f5c97668d6946ec4da83843aae9c22c4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.39999998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 497892165467204670, guid: f5c97668d6946ec4da83843aae9c22c4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -605,6 +664,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'road '
       objectReference: {fileID: 0}
+    - target: {fileID: 1720570442499770108, guid: f5c97668d6946ec4da83843aae9c22c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -624,11 +687,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4753215609500244549, guid: cae68bdf912f77945b3449ee66460973, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3135887e-17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4753215609500244549, guid: cae68bdf912f77945b3449ee66460973, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.596941
+      value: -5.196941
       objectReference: {fileID: 0}
     - target: {fileID: 4753215609500244549, guid: cae68bdf912f77945b3449ee66460973, type: 3}
       propertyPath: m_LocalRotation.w
@@ -675,3 +738,4 @@ SceneRoots:
   - {fileID: 1990939572463175858}
   - {fileID: 6888431376439543348}
   - {fileID: 2106412792}
+  - {fileID: 196224438}

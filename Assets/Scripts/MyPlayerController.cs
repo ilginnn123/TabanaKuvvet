@@ -8,7 +8,7 @@ public class MyPlayerController : MonoBehaviour
     [SerializeField] private float lateralSmoothSpeed = 10f;
 
     private float[] xPosition = { -0.0013f, 0.366f, 0.7261f }; 
-    private int currentXPositionIndex = 1;
+    private int currentXPositionIndex = 0;
     Vector3 targetPosition;
 
     void Start()
