@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sedan
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aeed7943936bfe1418996d14f9e80421, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -71,6 +75,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: aeed7943936bfe1418996d14f9e80421, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8441491060486190085}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: aeed7943936bfe1418996d14f9e80421, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8020132340298699085}
   m_SourcePrefab: {fileID: 100100000, guid: aeed7943936bfe1418996d14f9e80421, type: 3}
 --- !u!1 &2492035209197531515 stripped
 GameObject:
@@ -98,3 +105,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.6228333, y: 1.465198, z: 3.1676893}
   m_Center: {x: 0.012703969, y: 0.7082173, z: -0.0023011623}
+--- !u!114 &-8020132340298699085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2492035209197531515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfae2ec937112434d812542e45db0a8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarMover
+  carSpeed: 5
+  canMove: 1

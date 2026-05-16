@@ -6,6 +6,10 @@ public class GameManager : MonoBehaviour
     [Header("Ayarlar")]
     [SerializeField] private List<GameObject> Roads = new List<GameObject>();
     [SerializeField] private Transform playerPrefab; // Karakteri buraya sürükle
+    [SerializeField] Transform carSpawn;
+
+    private float previousPlayerZ;
+
 
     [Tooltip("Yolun uzunluðu. Boþluk kalýrsa burayý deðiþtir (Örn: 5, 10, 20)")]
     [SerializeField] private float roadPartDistance = 5.0f;
@@ -33,6 +37,14 @@ public class GameManager : MonoBehaviour
                 CreateRoad();
             }
         }
+    }
+    private void FixedUpdate()
+    {
+        float deltaZ = playerPrefab.position.z - previousPlayerZ;
+
+        carSpawn.position += new Vector3(0, 0, deltaZ);
+
+        previousPlayerZ = playerPrefab.position.z;
     }
 
     void CreateRoad()
