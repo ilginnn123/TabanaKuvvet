@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -7,9 +8,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<GameObject> Roads = new List<GameObject>();
     [SerializeField] private Transform playerPrefab; // Karakteri buraya sürükle
     [SerializeField] Transform carSpawn;
-
+    
     private float previousPlayerZ;
-
+    [SerializeField] private int currentScore;
+    [SerializeField] private int addScoreAmount = 100;
+    [SerializeField] private TextMeshProUGUI txtScore,txtInGameScore;
 
     [Tooltip("Yolun uzunluðu. Boþluk kalýrsa burayý deðiþtir (Örn: 5, 10, 20)")]
     [SerializeField] private float roadPartDistance = 5.0f;
@@ -24,6 +27,8 @@ public class GameManager : MonoBehaviour
         {
             CreateRoad();
         }
+        currentScore = 0;
+        txtInGameScore.text = "Score: " + currentScore.ToString();
     }
 
     void Update()
@@ -37,6 +42,7 @@ public class GameManager : MonoBehaviour
                 CreateRoad();
             }
         }
+
     }
     private void FixedUpdate()
     {
@@ -46,6 +52,13 @@ public class GameManager : MonoBehaviour
 
         previousPlayerZ = playerPrefab.position.z;
     }
+
+    public void SetFinalScore()
+    {
+        txtScore.text = "Score: " + currentScore.ToString();
+        txtInGameScore.gameObject.SetActive(false);
+    }
+
 
     void CreateRoad()
     {
@@ -66,5 +79,9 @@ public class GameManager : MonoBehaviour
 
         // Bir sonraki yolun ekleneceði mesafeyi artýrýyoruz
         roadLength += roadPartDistance;
+
+        //Skoru Arttýr
+        currentScore += addScoreAmount;
+        txtInGameScore.text = "Score: " + currentScore.ToString();
     }
 }
